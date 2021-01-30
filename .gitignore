@@ -109,6 +109,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+stable-api/
 
 # Spyder project settings
 .spyderproject
