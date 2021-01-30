@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>welcome </h1>
+
+    <h1>Hello buddy!</h1>
+
+    {% comment %} {% for s in students %}
+        <p>roll: {{s.roll}}</p>
+        <p>name: {{s.name}}</p>
+    {% endfor %} {% endcomment %}
+
+
+    <script>
+
+        fetch(
+            "http://127.0.0.1:8000/api/students"
+        ).then(res=>{
+            return res.json();
+        }).then(students =>{
+            console.log(students);
+        })
+    </script>
+
+</body>
+</html>

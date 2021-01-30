@@ -8,3 +8,7 @@ def indexjinja(request):
     students = Student.objects.all()
 
     return render(request, 'index.html', {'students':students})
+
+
+def indexapi(request):
+    return render(request,'index2.html')

@@ -20,5 +20,6 @@ from client import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('' ,views.indexjinja, name="home"),
+    path('studs/',views.indexapi, name="home2"),
     path('api/',include('api.urls')),
 ]
