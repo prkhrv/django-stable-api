@@ -9,11 +9,17 @@
     <h1>welcome {{user.username}}</h1>
 
     <h1>Hello buddy!</h1>
+    <div id="students">
 
-    {% for s in students %}
-        <p>roll: {{s.roll}}</p>
-        <p>name: {{s.name}}</p>
-    {% endfor %}
+    </div>
 
 </body>
+
+    <script>
+        console.log({{students|safe}})
+        student_data = {{students|safe}};
+
+        stud = document.getElementById("students")
+        stud.innerHTML = student_data[0].name;
+    </script>
 </html>

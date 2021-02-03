@@ -7,6 +7,7 @@ class Student(models.Model):
     roll = models.CharField(max_length=10,unique=True)
     name = models.CharField(max_length=40)
     college = models.CharField(max_length=100)
+    date = models.DateTimeField(blank=True,null=True)
 
 
     def __str__(self):

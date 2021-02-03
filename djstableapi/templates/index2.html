@@ -10,6 +10,10 @@
 
     <h1>Hello buddy!</h1>
 
+    <div id="students">
+
+    </div>
+
     {% comment %} {% for s in students %}
         <p>roll: {{s.roll}}</p>
         <p>name: {{s.name}}</p>
@@ -18,12 +22,18 @@
 
     <script>
 
+        var stud = document.getElementById("students")
+
         fetch(
             "http://127.0.0.1:8000/api/students"
         ).then(res=>{
             return res.json();
         }).then(students =>{
             console.log(students);
+            for (let i =0; i<students.length; i++){
+                stud.innerHTML = students[i].name; 
+            }
+        
         })
     </script>
 
