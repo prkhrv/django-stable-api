@@ -16,10 +16,10 @@
 </body>
 
     <script>
-        console.log({{students|safe}})
+        {% comment %} console.log({{students|safe}})
         student_data = {{students|safe}};
 
         stud = document.getElementById("students")
-        stud.innerHTML = student_data[0].name;
+        stud.innerHTML = student_data[0].name; {% endcomment %}
     </script>
 </html>

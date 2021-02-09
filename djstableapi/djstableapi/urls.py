@@ -22,5 +22,6 @@ urlpatterns = [
     path('' ,views.indexjinja, name="home"),
     path('add/',views.addstudent, name="add"),
     path('studs/',views.indexapi, name="home2"),
+    path('soccer/',views.getsoccerdata,name="soccer"),
     path('api/',include('api.urls')),
 ]

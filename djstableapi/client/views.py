@@ -1,6 +1,6 @@
 import json
 from django.shortcuts import render, get_object_or_404
-from .models import Student
+from .models import Student,SoccerInfo
 from django.http import JsonResponse
 from django.core import serializers
 from .forms import StudentForm
@@ -38,6 +38,13 @@ def indexjinja(request):
     students_json = {'success':True}
 
     return render(request, 'index.html', {'students':students_json})
+
+def getsoccerdata(request):
+    data = SoccerInfo.objects.all()
+    res = list(data.values())
+    # serialized_object = serializers.serialize('json',[data,])
+    return JsonResponse(res,safe=False)
+
 
 
 def indexapi(request):

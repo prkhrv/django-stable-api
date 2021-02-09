@@ -12,4 +12,7 @@ class Student(models.Model):
 
     def __str__(self):
         return self.name
+        
+class SoccerInfo(models.Model):
+    data = models.JSONField()
     
